@@ -5,7 +5,7 @@ function mka() {
 }
 
 function brunch() {
-    if lunch arrow_$1-userdebug; then
+    if lunch yuki_$1-userdebug; then
         mka bacon
     else
         echo "Lunch failed!"
@@ -16,14 +16,14 @@ function brunch() {
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/arrow/build/tools/repopick.py $@
+    $T/vendor/yuki/build/tools/repopick.py $@
 }
 
 function gerritpush() {
-    local GERRIT_URL=review.arrowos.net
-    local MANIFEST_PATH="$ANDROID_BUILD_TOP/manifest/arrow.xml"
+    local GERRIT_URL=review.yukios.net
+    local MANIFEST_PATH="$ANDROID_BUILD_TOP/manifest/yuki.xml"
     local PREFIX="ArrowOS/"
-    local branch=arrow-13.1
+    local branch=tsunemori-13
     local ref=for
     local push_options=""
 
@@ -64,7 +64,7 @@ function gerritpush() {
         name=$(grep "name=\"$repo\"" $MANIFEST_PATH | sed -e 's/.*name="//' -e 's/".*//')
     fi
     if [[ -z $name ]]; then
-        echo "fatal: repo is not in arrow manifest"
+        echo "fatal: repo is not in yuki manifest"
         return 1
     fi
     if [[ -z $ARROW_GERRIT_USER ]]; then

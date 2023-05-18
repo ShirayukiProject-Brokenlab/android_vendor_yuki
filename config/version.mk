@@ -29,7 +29,7 @@ endif
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 
 ifeq ($(ARROW_OFFICIAL), true)
-   LIST = $(shell cat infrastructure/devices/arrow.devices | awk '$$1 != "#" { print $$2 }')
+   LIST = $(shell cat infrastructure/devices/yuki.devices | awk '$$1 != "#" { print $$2 }')
     ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
       IS_OFFICIAL=true
       ARROW_BUILD_TYPE := OFFICIAL
@@ -45,7 +45,7 @@ PRODUCT_PACKAGES += \
 endif
 
 ifeq ($(ARROW_COMMUNITY), true)
-   LIST = $(shell cat infrastructure/devices/arrow-community.devices | awk '$$1 != "#" { print $$2 }')
+   LIST = $(shell cat infrastructure/devices/yuki-community.devices | awk '$$1 != "#" { print $$2 }')
     ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
       IS_COMMUNITY=true
       ARROW_BUILD_TYPE := COMMUNITY
@@ -59,12 +59,12 @@ endif
 ARROW_VERSION := Arrow-$(ARROW_MOD_VERSION)-$(CURRENT_DEVICE)-$(ARROW_BUILD_TYPE)-$(shell date -u +%Y%m%d)-$(ARROW_BUILD_ZIP_TYPE)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-  ro.arrow.version=$(ARROW_VERSION) \
-  ro.arrow.releasetype=$(ARROW_BUILD_TYPE) \
-  ro.arrow.ziptype=$(ARROW_BUILD_ZIP_TYPE) \
+  ro.yuki.version=$(ARROW_VERSION) \
+  ro.yuki.releasetype=$(ARROW_BUILD_TYPE) \
+  ro.yuki.ziptype=$(ARROW_BUILD_ZIP_TYPE) \
   ro.modversion=$(ARROW_MOD_VERSION)
 
 ARROW_DISPLAY_VERSION := Arrow-$(ARROW_MOD_VERSION)-$(ARROW_BUILD_TYPE)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-  ro.arrow.display.version=$(ARROW_DISPLAY_VERSION)
+  ro.yuki.display.version=$(ARROW_DISPLAY_VERSION)

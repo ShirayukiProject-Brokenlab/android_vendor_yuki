@@ -13,10 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License
 
-include vendor/arrow/config/BoardConfigKernel.mk
+include vendor/yuki/config/BoardConfigKernel.mk
 
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-include vendor/arrow/config/BoardConfigQcom.mk
+include vendor/yuki/config/BoardConfigQcom.mk
 endif
 
-include vendor/arrow/config/BoardConfigSoong.mk
+include vendor/yuki/config/BoardConfigSoong.mk
