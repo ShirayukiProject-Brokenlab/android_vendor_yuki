@@ -20,7 +20,7 @@ function repopick() {
 }
 
 function gerritpush() {
-    local GERRIT_URL=review.yukios.net
+    local GERRIT_URL=review.yukiprjkt.net
     local MANIFEST_PATH="$ANDROID_BUILD_TOP/manifest/yuki.xml"
     local PREFIX="ArrowOS/"
     local branch=tsunemori-13
