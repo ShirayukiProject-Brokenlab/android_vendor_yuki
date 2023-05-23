@@ -17,9 +17,6 @@ include vendor/yuki/config/version.mk
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/yuki/overlay/common
 
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/yuki/overlay/themes/ArrowIcons
-
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     vendor/yuki/overlay/common
 
