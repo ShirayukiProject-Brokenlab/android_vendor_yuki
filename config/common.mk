@@ -1,4 +1,4 @@
-# Copyright (C) 2018-2020 ArrowOS
+# Copyright (C) 2023 yukiprjkt
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -124,3 +124,6 @@ include vendor/yuki/config/props.mk
 
 # Sounds
 include vendor/yuki/config/sounds.mk
+
+# yukiprjkt Pixel Launcher fork
+include vendor/PixelLauncher/PixelLauncher.mk
